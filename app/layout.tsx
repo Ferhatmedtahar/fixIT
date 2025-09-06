@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Footer from "../common/ui/Footer";
 import NavBar from "../common/ui/NavBar";
 import favIcon from "../public/favicon.ico";
-// import ogImage from "../public/images/about-2.png";
+
 import "./globals.css";
 export const metadata: Metadata = {
   title: "FixIT | Ammar Telidji University",

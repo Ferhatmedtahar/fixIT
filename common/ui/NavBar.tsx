@@ -1,7 +1,7 @@
 "use client";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { Mail, Phone, Settings } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -40,14 +40,18 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className="navbar fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-4">
+      <nav className="navbar fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-4 border-b border-gray-300  ">
         <div className="container mx-auto flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center">
-              <Settings className="w-6 h-6 text-white" />
-            </div>
-            <span className="text-2xl font-bold text-white font-inter">
-              Fix<span className="text-gradient">IT</span>
+            {/* <Image
+              src="/logo.png"
+              className="w-12 h-12 rounded-full"
+              alt="Logo"
+              width={36}
+              height={36}
+            />{" "} */}
+            <span className="text-2xl font-bold text-primary font-inter">
+              Fix<span className="">IT</span>
             </span>
           </Link>
 
@@ -57,7 +61,7 @@ export default function NavBar() {
               <Link
                 key={item.id}
                 href={`#${item.id}`}
-                className="text-neutral-200 hover:text-primary-400 font-medium transition-colors duration-300 relative group"
+                className="text-primary/90 hover:text-primary-400 font-medium transition-colors duration-300 relative group"
               >
                 {item.title}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-400 transition-all duration-300 group-hover:w-full"></span>
@@ -67,7 +71,7 @@ export default function NavBar() {
           <div className="hidden lg:flex items-center gap-4">
             <Link
               href={`tel:${fixitInfo.contact.phone}`}
-              className="flex items-center gap-2 text-neutral-300 hover:text-secondary-400 transition-colors duration-300"
+              className="flex items-center gap-2 text-primary  hover:text-secondary-400 transition-colors duration-300"
             >
               <Phone className="w-4 h-4" />
               <span className="text-sm font-medium">

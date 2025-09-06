@@ -1,173 +1,159 @@
 "use client";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger, SplitText } from "gsap/all";
-import { useRef } from "react";
+import { Card } from "@/common/card"; // Adjust import path as needed
+import { motion } from "motion/react";
 
-gsap.registerPlugin(SplitText, ScrollTrigger);
+const servicesData = [
+  {
+    id: 1,
+    title: "Software Troubleshooting",
+    description: "Diagnosing and fixing errors so your system runs smoothly",
+  },
+  {
+    id: 2,
+    title: "Operating System Installation",
+    description: "Clean installs or upgrades for Windows, Linux, and more",
+  },
+  {
+    id: 3,
+    title: "Performance Optimization",
+    description: "Speeding up slow machines and improving overall stability",
+  },
+  {
+    id: 4,
+    title: "Virus & Malware Cleanup",
+    description: "Removing harmful files and keeping your data safe",
+  },
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: {
+    y: 30,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.61,
+      delay: 0.3,
+      ease: "easeOut",
+    },
+  },
+};
+
+const headerVariants = {
+  hidden: { y: 50, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
 
 const Services = () => {
-  const containerRef = useRef(null);
-
-  useGSAP(() => {
-    const mainText = new SplitText(".main-text", {
-      type: "words, lines",
-    });
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top 80%",
-        end: "bottom 20%",
-      },
-    });
-
-    tl.from(".intro-text", {
-      y: 50,
-      opacity: 0,
-      duration: 1,
-      ease: "power2.out",
-    })
-      .from(
-        mainText.lines,
-        {
-          y: 30,
-          opacity: 0,
-          duration: 0.8,
-          ease: "power2.out",
-          stagger: 0.1,
-        },
-        "-=0.5"
-      )
-      .from(
-        ".service-item",
-        {
-          y: 20,
-          opacity: 0,
-          duration: 0.6,
-          ease: "power2.out",
-          stagger: 0.1,
-        },
-        "-=0.3"
-      )
-      .from(
-        ".closing-text",
-        {
-          y: 30,
-          opacity: 0,
-          duration: 0.8,
-          ease: "power2.out",
-        },
-        "-=0.2"
-      );
-  }, []);
-
   return (
     <div className="relative">
-      <section id="services" className="min-h-screen ">
-        <div ref={containerRef} className="py-20 px-6">
+      <section id="services" className="min-h-screen">
+        <div className="py-20 px-6">
           <div className="max-w-4xl mx-auto">
             {/* Section Header */}
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-6">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+            <motion.div
+              className="text-center mb-16"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={headerVariants}
+            >
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
                 About Us
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
                 Computer Support Made Simple
               </h2>
-            </div>
+            </motion.div>
 
-            <div className="space-y-8">
-              <div className="intro-text text-center">
-                <p className="text-xl text-gray-700 leading-relaxed">
+            <motion.div
+              className="space-y-4"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={containerVariants}
+            >
+              {/* Intro Text */}
+              <motion.div className="text-center" variants={itemVariants}>
+                <p className="text-xl text-muted-foreground leading-relaxed">
                   We provide quick, affordable computer support for students and
                   everyday users alike.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="main-text">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
+              {/* Services Section */}
+              <motion.div variants={itemVariants}>
+                <h3 className="text-2xl font-semibold text-foreground mb-6 text-center">
                   Our Core Services
                 </h3>
 
-                <div className="grid gap-6 md:grid-cols-2">
-                  <div className="service-item bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">
-                          Software Troubleshooting
-                        </h4>
-                        <p className="text-gray-600">
-                          Diagnosing and fixing errors so your system runs
-                          smoothly
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                <motion.div
+                  className="grid gap-4 md:grid-cols-2"
+                  variants={containerVariants}
+                >
+                  {servicesData.map((service, index) => (
+                    <motion.div
+                      key={service.id}
+                      variants={itemVariants}
+                      custom={index}
+                    >
+                      <Card className="p-6 h-full">
+                        <div className="flex items-start space-x-3">
+                          <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
+                          <div>
+                            <h4 className="font-semibold text-foreground mb-2">
+                              {service.title}
+                            </h4>
+                            <p className="text-muted-foreground">
+                              {service.description}
+                            </p>
+                          </div>
+                        </div>
+                      </Card>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </motion.div>
 
-                  <div className="service-item bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">
-                          Operating System Installation
-                        </h4>
-                        <p className="text-gray-600">
-                          Clean installs or upgrades for Windows, Linux, and
-                          more
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="service-item bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">
-                          Performance Optimization
-                        </h4>
-                        <p className="text-gray-600">
-                          Speeding up slow machines and improving overall
-                          stability
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="service-item bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">
-                          Virus & Malware Cleanup
-                        </h4>
-                        <p className="text-gray-600">
-                          Removing harmful files and keeping your data safe
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="closing-text text-center bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-                <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                  Whether you need a simple fix or a full system refresh, we
-                  handle these services and much more right here on campus.
-                </p>
-                <p className="text-lg font-medium text-blue-700">
-                  If you're a student experiencing technical issues, reach out
-                  and we'll get you back up and running fast.
-                </p>
-              </div>
-            </div>
+              {/* Closing Text */}
+              <motion.div variants={itemVariants}>
+                <Card className="text-center p-6">
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                    Whether you need a simple fix or a full system refresh, we
+                    handle these services and much more right here on campus.
+                  </p>
+                  <p className="text-lg font-medium text-primary">
+                    If you're a student experiencing technical issues, reach out
+                    and we'll get you back up and running fast.
+                  </p>
+                </Card>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-blue-600 opacity-60"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/60 to-primary opacity-60"></div>
       </section>
     </div>
   );
