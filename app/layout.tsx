@@ -8,7 +8,7 @@ import favIcon from "../public/favicon.ico";
 import "./globals.css";
 export const metadata: Metadata = {
   title: "FixIT | Professional Computer Repair Services",
-  metadataBase: new URL("https://unibyte-site.vercel.app/"),
+  metadataBase: new URL("https://fix-it-pi.vercel.app/"),
   description: `FixIT - Professional computer repair and trusted IT support services. 
 Fast and affordable IT support for students and everyday users at Ammar Telidji University, Laghouat.`,
   keywords: [
@@ -31,7 +31,7 @@ Fast and affordable IT support for students and everyday users at Ammar Telidji 
     title: "FixIT | Your Tech Problems, Our Solutions",
     description:
       "Professional computer repair and trusted IT support services. Fast and affordable IT support in Laghouat, Algeria.",
-    url: "https://unibyte-site.vercel.app/",
+    url: "https://fix-it-pi.vercel.app/",
     siteName: "FixIT",
     images: [],
     locale: "en_US",
