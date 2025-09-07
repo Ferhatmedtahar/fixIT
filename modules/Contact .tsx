@@ -166,7 +166,9 @@ const DirectOrder: React.FC = () => {
                     {t("form.callUs")}
                   </h4>
                   <Button asChild>
-                    <a href={`tel:${SOCIAL_INFO.phone}`}>{SOCIAL_INFO.phone}</a>
+                    <a dir="ltr" href={`tel:${SOCIAL_INFO.phone}`}>
+                      {SOCIAL_INFO.phone}
+                    </a>
                   </Button>
                 </div>
               )}
@@ -242,9 +244,7 @@ const DirectOrder: React.FC = () => {
               <div className="form-group">
                 <label
                   htmlFor="phone"
-                  className={`block text-sm font-semibold text-[var(--foreground)] text-${
-                    dir === "rtl" ? "right" : "left"
-                  }`}
+                  className={`block text-sm font-semibold text-[var(--foreground)] `}
                 >
                   {t("form.phone")}
                 </label>
@@ -256,9 +256,7 @@ const DirectOrder: React.FC = () => {
                   placeholder={t("form.phonePlaceholder")}
                   required
                   state={errors.phone ? "error" : "default"}
-                  className={`mt-1 ${
-                    dir === "rtl" ? "text-right" : "text-left"
-                  }`}
+                  className={`mt-1 `}
                 />
                 {errors.phone && (
                   <p
