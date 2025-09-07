@@ -6,42 +6,34 @@ import Footer from "../common/ui/Footer";
 import NavBar from "../common/ui/NavBar";
 import favIcon from "../public/favicon.ico";
 import "./globals.css";
-
 export const metadata: Metadata = {
-  title: "FixIT | Ammar Telidji University",
+  title: "FixIT | Professional Computer Repair Services",
   metadataBase: new URL("https://unibyte-site.vercel.app/"),
-  description: `UniByte is a student-led tech club at Ammar Telidji University. 
-Whether you're passionate about coding, design, photography, or any tech frontier, 
-UniByte is your launchpad for personal growth, meaningful collaboration, and real-world impact.`,
+  description: `FixIT - Professional computer repair and trusted IT support services. 
+Fast and affordable IT support for students and everyday users at Ammar Telidji University, Laghouat.`,
   keywords: [
-    "UniByte",
-    "tech club",
+    "FixIT",
+    "computer repair",
+    "IT support",
+    "computer troubleshooting",
     "Ammar Telidji University",
-    "computer science",
-    "programming",
-    "web development",
-    "UI/UX",
-    "data structures",
-    "student tech community",
-    "hackathons",
-    "photography",
-    "workshops",
+    "Laghouat",
+    "Algeria",
+    "OS installation",
+    "virus removal",
+    "PC optimization",
+    "technical support",
+    "PC repair",
+    "computer maintenance",
+    "student IT services",
   ],
   openGraph: {
-    title: "UniByte | Where the Power of 0s and 1s Unite!",
+    title: "FixIT | Your Tech Problems, Our Solutions",
     description:
-      "Join UniByte — the student-led tech community at Ammar Telidji University. Explore coding, design, workshops, and more.",
+      "Professional computer repair and trusted IT support services. Fast and affordable IT support in Laghouat, Algeria.",
     url: "https://unibyte-site.vercel.app/",
-    siteName: "UniByte",
-    images: [
-      //todo
-      // {
-      //   url: ogImage.src,
-      //   width: ogImage.width,
-      //   height: ogImage.height,
-      //   alt: "UniByte - Student Tech Club",
-      // },
-    ],
+    siteName: "FixIT",
+    images: [],
     locale: "en_US",
     type: "website",
   },
@@ -58,21 +50,20 @@ UniByte is your launchpad for personal growth, meaningful collaboration, and rea
   },
   twitter: {
     card: "summary_large_image",
-    title: "UniByte | Ammar Telidji Tech Club",
+    title: "FixIT | Professional Computer Repair Services",
     description:
-      "A student-led tech club focused on innovation, learning, and real-world tech experiences at Ammar Telidji University.",
-    images: [
-      //todo
-      // {
-      //   url: ogImage.src,
-      //   width: ogImage.width,
-      //   height: ogImage.height,
-      //   alt: "UniByte - Student Tech Club",
-      // },
-    ],
+      "Fast and affordable IT support for students and everyday users. Troubleshooting, OS installation, virus removal and more in Laghouat, Algeria.",
+    images: [],
   },
   icons: {
     shortcut: favIcon.src,
+  },
+
+  other: {
+    "geo.region": "DZ-03",
+    "geo.placename": "Laghouat, Algeria",
+    "geo.position": "33.8;2.86667",
+    ICBM: "33.8, 2.86667",
   },
 };
 
