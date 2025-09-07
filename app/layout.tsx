@@ -1,3 +1,4 @@
+import { LanguageProvider } from "@/context/language-provider";
 import { ThemeProvider } from "@/context/theme-provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -118,10 +119,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NavBar />
+          <LanguageProvider>
+            <NavBar />
 
-          {children}
-          <Footer />
+            {children}
+            <Footer />
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -1,61 +1,39 @@
+"use client";
+import { useLanguage } from "@/context/language-provider";
 import { SOCIAL_INFO } from "@/utils/constants";
 import { Facebook, Instagram, Mail } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
-
+const NAVBAR_ITEMS = [
+  { id: "hero", title: "nav.home" },
+  { id: "services", title: "nav.services" },
+  { id: "faq", title: "nav.faq" },
+  { id: "contact", title: "nav.contact" },
+];
 function Footer() {
+  const { dir, t } = useLanguage();
   return (
     <footer className="bg-primary-800 border-t border-primary-500 px-6 md:px-24 py-10 text-primary-100">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-3">
-            <Image
-              src="/logo.png"
-              alt="Logo"
-              width={36}
-              height={36}
-              className="w-10 h-10 rounded-full"
-            />
             <span className="text-[var(--primary)] text-xl font-semibold">
-              FixIT
+              {t("hero.title")}
             </span>
           </div>
         </div>
 
         <nav>
           <ul className="flex flex-wrap gap-6">
-            <li>
-              <Link
-                href="#about"
-                className="hover:text-[var(--secondary)] text-sm font-medium transition-colors duration-200"
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#events"
-                className="hover:text-[var(--secondary)] text-sm font-medium transition-colors duration-200"
-              >
-                Events
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#community"
-                className="hover:text-[var(--secondary)] text-sm font-medium transition-colors duration-200"
-              >
-                Community
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#contact"
-                className="hover:text-[var(--secondary)] text-sm font-medium transition-colors duration-200"
-              >
-                Contact
-              </Link>
-            </li>
+            {NAVBAR_ITEMS.map((item) => (
+              <li key={item.id}>
+                <Link
+                  href={`#${item.id}`}
+                  className="text-[var(--primary)] hover:text-[var(--foreground)] font-medium transition-colors duration-300"
+                >
+                  {t(item.title)}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
@@ -85,7 +63,7 @@ function Footer() {
         </div>
 
         <p className="text-sm text-primary-100 mt-4 md:mt-0">
-          © {new Date().getFullYear()} FixIT. All rights reserved.
+          © {new Date().getFullYear()} {t("footer.copyright")}
         </p>
       </div>
     </footer>

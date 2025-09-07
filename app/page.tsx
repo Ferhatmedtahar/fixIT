@@ -6,7 +6,7 @@ import Services from "@/modules/Services";
 
 export default function Home() {
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-hidden flex flex-col ">
       <Hero />
       <Services />
       <Location />
