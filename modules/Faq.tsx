@@ -27,14 +27,14 @@ function Faq() {
     });
   }, []);
 
-  const [openIndex, setOpenIndex] = useState<number | null>(null); // initially no item is open
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleQuestion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <div className="py-8 px-6 bg-background">
+    <div className="py-8 px-6 ">
       <section id="faq" className=" mx-auto max-w-6xl px-4 ">
         <div className="space-y-6">
           <h2 className="text-center text-4xl md:text-6xl pb-4 font-bold bg-gradient-to-r from-primary via-primary/70 to-primary bg-clip-text text-transparent mb-4">
@@ -46,13 +46,13 @@ function Faq() {
               <div key={index} className="py-2">
                 <button
                   onClick={() => toggleQuestion(index)}
-                  className="w-full py-4 text-left flex items-start justify-between gap-4 hover:bg-secondary/40 transition-colors duration-200 focus:outline-none focus:bg-secondary/40 rounded-lg px-2"
+                  className="w-full py-4 text-left flex items-start justify-between gap-4 hover:bg-[var(--secondary]/10 transition-colors duration-200 focus:outline-none focus:bg-[var(--secondary]/20 rounded-lg px-2"
                 >
-                  <span className="text-[15px] leading-6 font-medium text-primary flex-1 hover:no-underline">
+                  <span className="text-[15px] leading-6 font-medium text-[var(--primary)] flex-1 hover:no-underline">
                     {item.question}
                   </span>
                   <ChevronDownIcon
-                    className={`w-4 h-4 text-primary/70 shrink-0 mt-0.5 transition-transform duration-300 ease-in-out ${
+                    className={`w-4 h-4 text-[var(--primary)]/70 shrink-0 mt-0.5 transition-transform duration-300 ease-in-out ${
                       openIndex === index ? "rotate-180" : "rotate-0"
                     }`}
                   />
@@ -67,7 +67,7 @@ function Faq() {
                 >
                   <div className="pb-4 pt-0 px-2">
                     <div
-                      className={`text-muted-foreground leading-relaxed transform transition-transform duration-300 ease-in-out ${
+                      className={`text-[var(--foreground)]/85 leading-relaxed transform transition-transform duration-300 ease-in-out ${
                         openIndex === index ? "translate-y-0" : "-translate-y-2"
                       }`}
                     >

@@ -3,16 +3,16 @@ import { cva, VariantProps } from "class-variance-authority";
 import React, { TextareaHTMLAttributes } from "react";
 
 const textareaVariants = cva(
-  "font-head rounded-lg  shadow-sm transition-all duration-[350ms] w-full border-2 border-b-4 border-r-4 border-foreground focus:outline-hidden disabled:cursor-not-allowed disabled:opacity-50 min-h-16",
+  "font-head rounded-lg  shadow-[1px_1px_0_var(--foreground)] transition-all duration-[350ms] w-full border-2  border-b-3 border-r-3 border-[var(--foreground)] focus:outline-hidden disabled:cursor-not-allowed disabled:opacity-50 min-h-16",
   {
     variants: {
       variant: {
         default:
-          "shadow-black hover:shadow-none focus:shadow-none bg-background text-foreground hover:translate-y-1 focus:translate-y-1",
+          " hover:shadow-none focus:shadow-none bg-[var(--background)] placeholder:text-[var(--foreground)]/70 text-[var(--foreground)] hover:translate-y-1 focus:translate-y-1",
         outline:
-          "shadow-[var(--theme-shadow)] hover:shadow-none focus:shadow-none bg-transparent text-foreground hover:translate-y-1 focus:translate-y-1 hover:bg-accent/20 focus:bg-accent/20",
+          " hover:shadow-none focus:shadow-none bg-transparent text-foreground hover:translate-y-1 focus:translate-y-1 hover:bg-accent/20 focus:bg-accent/20",
         filled:
-          "shadow-black hover:shadow-none focus:shadow-none bg-secondary text-secondary-foreground hover:translate-y-1 focus:translate-y-1 hover:bg-secondary/90 focus:bg-background",
+          " hover:shadow-none focus:shadow-none bg-secondary text-secondary-foreground hover:translate-y-1 focus:translate-y-1 hover:bg-secondary/90 focus:bg-background",
       },
       size: {
         sm: "px-2 py-1 text-xs sm:px-3 sm:py-1 sm:text-sm min-h-12",

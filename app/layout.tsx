@@ -1,8 +1,8 @@
+import { ThemeProvider } from "@/context/theme-provider";
 import type { Metadata } from "next";
 import Footer from "../common/ui/Footer";
 import NavBar from "../common/ui/NavBar";
 import favIcon from "../public/favicon.ico";
-
 import "./globals.css";
 export const metadata: Metadata = {
   title: "FixIT | Ammar Telidji University",
@@ -79,13 +79,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={` antialiased selection:bg-primary-800 selection:text-primary-50`}
       >
-        <NavBar />
-        {children}
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NavBar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -4,29 +4,22 @@ import { Card } from "@/common/card"; // Adjust import path as needed
 function Location() {
   return (
     <div className="relative">
-      <section id="about" className=" py-20 px-6 bg-background">
+      <section id="about" className=" py-20 px-6 bg-[var(--background)]">
         <div className="max-w-6xl mx-auto">
-          {/* Header */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-              <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-              Find Us
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4">
               Our Location
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-[var(--foreground)]/90">
               We're located at Ammar Telidji University in Laghouat, Algeria -
               ready to help with your computer support needs
             </p>
           </div>
 
-          {/* Location Info and Map Container */}
           <div className="grid lg:grid-cols-2 gap-6 items-start">
-            {/* Location Information */}
             <div className="space-y-4">
               <Card className="p-6 w-full">
-                <h3 className="text-xl font-semibold text-foreground mb-4">
+                <h3 className="text-xl font-semibold text-[var(--foreground)]/95 mb-4">
                   Contact Information
                 </h3>
                 <div className="space-y-4">
@@ -41,8 +34,12 @@ function Location() {
                       </svg>
                     </div>
                     <div>
-                      <p className="font-medium text-foreground">Address</p>
-                      <p className="text-muted-foreground">Laghouat, Algeria</p>
+                      <p className="font-medium text-[var(--foreground)]/90">
+                        Address
+                      </p>
+                      <p className="text-[var(--foreground)]/90">
+                        Laghouat, Algeria
+                      </p>
                     </div>
                   </div>
 
@@ -53,8 +50,10 @@ function Location() {
                       </svg>
                     </div>
                     <div>
-                      <p className="font-medium text-foreground">Phone</p>
-                      <p className="text-muted-foreground">
+                      <p className="font-medium text-[var(--foreground)]/90">
+                        Phone
+                      </p>
+                      <p className="text-[var(--foreground)]/90">
                         Available on campus
                       </p>
                     </div>
@@ -68,8 +67,10 @@ function Location() {
                       </svg>
                     </div>
                     <div>
-                      <p className="font-medium text-foreground">Email</p>
-                      <p className="text-muted-foreground">
+                      <p className="font-medium text-[var(--foreground)]/90">
+                        Email
+                      </p>
+                      <p className="text-[var(--foreground)]/90">
                         contact@support.dz
                       </p>
                     </div>
@@ -78,23 +79,23 @@ function Location() {
               </Card>
 
               <Card className="p-6 w-full">
-                <h3 className="text-xl font-semibold text-foreground mb-4 ">
+                <h3 className="text-xl font-semibold text-[var(--foreground)] mb-4 ">
                   Service Hours
                 </h3>
                 <div className="space-y-2">
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">
+                    <span className="text-[var(--foreground)]/90">
                       Sunday - Thursday
                     </span>
-                    <span className="font-medium text-foreground">
+                    <span className="font-medium text-[var(--foreground)]">
                       8:00 AM - 5:00 PM
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">
+                    <span className="text-[var(--foreground)]/90">
                       Friday - Saturday
                     </span>
-                    <span className="font-medium text-foreground">
+                    <span className="font-medium text-[var(--foreground)]">
                       By Appointment
                     </span>
                   </div>
@@ -102,10 +103,8 @@ function Location() {
               </Card>
             </div>
 
-            {/* Map Container */}
             <Card className="overflow-hidden ">
               <div className="h-96 relative">
-                {/* Embedded Google Map */}
                 <iframe
                   src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.8184953619143!2d2.825040494367871!3d33.7747441196735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1262e10076c0cb67%3A0x41357958e95a346d!2z2KzYp9mF2LnYqSDYudmF2KfYsSDYq9mE2YrYrNmKLdin2YTZgti32Kgg2KfZhNis2KfZhdi52Yog2LHZgtmFIDAy!5e1!3m2!1sen!2sdz!4v1757096223545!5m2!1sen!2sdz`}
                   width="100%"
@@ -117,22 +116,20 @@ function Location() {
                 ></iframe>
               </div>
 
-              {/* Map Footer */}
-              <div className="p-4 bg-muted border-t-2 border-foreground">
-                <p className="text-sm text-muted-foreground text-center">
+              <div className="p-4 border border-t-2 text-[var(--foreground)]">
+                <p className="text-sm text-[var(--foreground)]/95 text-center">
                   📍 Laghouat, Algeria - Click the map to get directions
                 </p>
               </div>
             </Card>
           </div>
 
-          {/* Call to Action */}
           <div className="mt-12 text-center">
-            <Card className="p-8 text-center bg-primary/5 w-full">
-              <h3 className="text-xl font-semibold text-foreground mb-2">
+            <Card className="p-8 text-center bg-primary/50 w-full">
+              <h3 className="text-xl font-semibold text-[var(--foreground)] mb-2">
                 Need Help? We're Here for You
               </h3>
-              <p className="text-muted-foreground mb-4">
+              <p className="text-[var(--foreground)]/90 mb-4">
                 Drop by our location or reach out to us for quick computer
                 support
               </p>

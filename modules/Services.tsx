@@ -47,7 +47,6 @@ const itemVariants = {
     transition: {
       duration: 0.61,
       delay: 0.3,
-      ease: "easeOut",
     },
   },
 };
@@ -59,7 +58,6 @@ const headerVariants = {
     opacity: 1,
     transition: {
       duration: 0.8,
-      ease: "easeOut",
     },
   },
 };
@@ -70,7 +68,6 @@ const Services = () => {
       <section id="services" className="min-h-screen">
         <div className="py-20 px-6">
           <div className="max-w-4xl mx-auto">
-            {/* Section Header */}
             <motion.div
               className="text-center mb-16"
               initial="hidden"
@@ -78,11 +75,7 @@ const Services = () => {
               viewport={{ once: true, amount: 0.3 }}
               variants={headerVariants}
             >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-                <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                About Us
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-8">
                 Computer Support Made Simple
               </h2>
             </motion.div>
@@ -94,17 +87,15 @@ const Services = () => {
               viewport={{ once: true, amount: 0.2 }}
               variants={containerVariants}
             >
-              {/* Intro Text */}
               <motion.div className="text-center" variants={itemVariants}>
-                <p className="text-xl text-muted-foreground leading-relaxed">
+                <p className="text-xl  text-[var(--foreground)]/90 leading-relaxed">
                   We provide quick, affordable computer support for students and
                   everyday users alike.
                 </p>
               </motion.div>
 
-              {/* Services Section */}
               <motion.div variants={itemVariants}>
-                <h3 className="text-2xl font-semibold text-foreground mb-6 text-center">
+                <h3 className="text-2xl font-semibold  text-[var(--foreground)]/90  mb-6 text-center">
                   Our Core Services
                 </h3>
 
@@ -120,12 +111,12 @@ const Services = () => {
                     >
                       <Card className="p-6 h-full">
                         <div className="flex items-start space-x-3">
-                          <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
+                          <div className="w-2 h-2 bg-[var(--primary)] rounded-full mt-3 flex-shrink-0"></div>
                           <div>
-                            <h4 className="font-semibold text-foreground mb-2">
+                            <h4 className="font-semibold mb-2">
                               {service.title}
                             </h4>
-                            <p className="text-muted-foreground">
+                            <p className=" text-[var(--foreground)]/90 ">
                               {service.description}
                             </p>
                           </div>
@@ -136,14 +127,13 @@ const Services = () => {
                 </motion.div>
               </motion.div>
 
-              {/* Closing Text */}
               <motion.div variants={itemVariants}>
                 <Card className="text-center p-6">
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                  <p className="text-lg text-[var(--foreground)] leading-relaxed mb-4">
                     Whether you need a simple fix or a full system refresh, we
                     handle these services and much more right here on campus.
                   </p>
-                  <p className="text-lg font-medium text-primary">
+                  <p className="text-lg font-medium text-[var(--primary)]">
                     If you're a student experiencing technical issues, reach out
                     and we'll get you back up and running fast.
                   </p>

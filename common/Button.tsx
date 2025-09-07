@@ -4,16 +4,16 @@ import { cva, VariantProps } from "class-variance-authority";
 import React, { ButtonHTMLAttributes } from "react";
 
 const buttonVariants = cva(
-  "font-head rounded-lg shadow-md transition-all outline-hidden cursor-pointer  duration-[350ms] font-medium flex items-center justify-center",
+  "font-head rounded-lg shadow-[1px_1px_0_var(--foreground)]  transition-all outline-hidden cursor-pointer  duration-300 font-medium flex items-center justify-center",
   {
     variants: {
       variant: {
         default:
-          "shadow-black hover:shadow-none bg-primary text-primary-foreground border-2  border-b-4 border-r-4  border-foreground hover:translate-y-1 hover:bg-primary/90",
+          " hover:shadow-none bg-primary text-primary-foreground border-2  border-b-3 border-r-3  border-[var(--foreground)] hover:translate-y-1 hover:bg-primary/90",
         secondary:
-          "shadow-black hover:shadow-none hover:shadow-none bg-secondary text-secondary-foreground border-2 border-b-4 border-r-4  border-foreground hover:translate-y-1 hover:bg-secondary/90",
+          " hover:shadow-none hover:shadow-none bg-secondary text-secondary-foreground border-2 border-b-3 border-r-3   border-[var(--foreground)] hover:translate-y-1 hover:bg-secondary/90",
         outline:
-          "shadow-[var(--theme-shadow)] hover:shadow-none bg-transparent text-foreground border-2 border-foreground hover:translate-y-1 hover:bg-accent/20",
+          "  hover:shadow-none bg-transparent text-[var(--foreground)] border-2  border-b-3 border-r-3  border-[var(--foreground)] hover:translate-y-1 hover:bg-accent/20",
         link: "bg-transparent text-primary hover:underline",
         ghost: "hover:bg-accent/20 text-foreground",
       },

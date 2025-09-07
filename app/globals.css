@@ -7,33 +7,38 @@
 }
 
 @theme {
-  /* Font families */
   --font-sans: "Inter", sans-serif;
   --font-inter: "Inter", sans-serif;
   --font-roboto: "Roboto", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
   --font-serif: "Inter", sans-serif;
 
-  /* Light theme - Professional black, white, and blue */
+  /* Light mode colors */
   --color-background: #ffffff;
-  --color-foreground: #1a1a1a;
-  --color-muted: #f8f9fa;
-  --color-muted-foreground: #6c757d;
+  --color-foreground: #111827;
+  --color-muted: #f3f4f6;
+  --color-muted-foreground: #6b7280;
   --color-card: #ffffff;
-  --color-card-foreground: #1a1a1a;
+  --color-card-foreground: #111827;
   --color-popover: #ffffff;
-  --color-popover-foreground: #1a1a1a;
-  --color-border: #e5e7eb;
+  --color-popover-foreground: #111827;
+  --color-border: #d1d5db;
   --color-input: #ffffff;
-  --color-primary: #2563eb;
-  --color-primary-hover: #1d4ed8;
+
+  --color-primary: #1d4ed8;
+  --color-primary-hover: #1e40af;
   --color-primary-foreground: #ffffff;
-  --color-secondary: #64748b;
+
+  --color-secondary: #6d28d9;
+  --color-secondary-hover: #5b21b6;
   --color-secondary-foreground: #ffffff;
-  --color-accent: #f1f5f9;
-  --color-accent-foreground: #1a1a1a;
+
+  --color-accent: #f3f4f6;
+  --color-accent-foreground: #111827;
+
   --color-destructive: #dc2626;
   --color-destructive-foreground: #ffffff;
+
   --color-ring: #2563eb;
   --shadow-primary: #2563eb;
 }
@@ -41,55 +46,68 @@
 :root {
   --radius: 0.5rem;
   --background: #ffffff;
-  --foreground: #1a1a1a;
-  --muted: #f8f9fa;
-  --muted-foreground: #6c757d;
+  --foreground: #111827;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
   --card: #ffffff;
-  --card-foreground: #1a1a1a;
+  --card-foreground: #111827;
   --popover: #ffffff;
-  --popover-foreground: #1a1a1a;
-  --border: #e5e7eb;
+  --popover-foreground: #111827;
+  --border: #d1d5db;
   --input: #ffffff;
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
+
+  --primary: #1d4ed8;
+  --primary-hover: #1e40af;
   --primary-foreground: #ffffff;
-  --secondary: #64748b;
+
+  --secondary: #6d28d9;
+  --secondary-hover: #5b21b6;
   --secondary-foreground: #ffffff;
-  --accent: #f1f5f9;
-  --accent-foreground: #1a1a1a;
+
+  --accent: #f3f4f6;
+  --accent-foreground: #111827;
+
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
+
   --ring: #2563eb;
 
-  /* Theme shadow using blue primary color */
-  --theme-shadow: 0 4px 8px rgba(37, 99, 235, 0.15);
+  --theme-shadow: 2px 2px 0 rgba(29, 78, 216, 0.4);
 }
 
+/* FIXED: Proper dark mode variables that actually override the light mode ones */
 .dark {
-  --background: #0f0f0f;
-  --foreground: #ffffff;
-  --muted: #1a1a1a;
-  --muted-foreground: #a3a3a3;
-  --card: #1a1a1a;
-  --card-foreground: #ffffff;
-  --popover: #1a1a1a;
-  --popover-foreground: #ffffff;
-  --border: #2a2a2a;
-  --input: #2a2a2a;
+  --background: #0d0d0d;
+  --foreground: #f9fafb;
+  --muted: #1f2937;
+  --muted-foreground: #9ca3af;
+  --card: #111111; /* This is the key fix - proper dark card background */
+  --card-foreground: #f9fafb; /* Proper light text on dark background */
+  --popover: #111111;
+  --popover-foreground: #f9fafb;
+  --border: #374151; /* Better visibility in dark mode */
+  --input: #2d2d2d;
+
   --primary: #3b82f6;
   --primary-hover: #2563eb;
   --primary-foreground: #ffffff;
-  --secondary: #71717a;
+
+  --secondary: #8b5cf6;
+  --secondary-hover: #7c3aed;
   --secondary-foreground: #ffffff;
+
   --accent: #262626;
-  --accent-foreground: #ffffff;
+  --accent-foreground: #f9fafb;
+
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
+
   --ring: #3b82f6;
 
-  /* Dark theme shadow using blue primary color */
-  --theme-shadow: 0 4px 8px rgba(59, 130, 246, 0.25);
+  --theme-shadow: 2px 2px 0 rgba(59, 130, 246, 0.45);
 }
+
+/* FIXED: Removed the confusing @theme block for dark mode - stick to CSS custom properties */
 
 html,
 body {
@@ -180,18 +198,57 @@ body {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Hero section */
   #hero {
     @apply relative z-10 min-h-dvh w-full border border-transparent;
     background: var(--background);
 
+    /* Light mode gradient background */
+    background-image: radial-gradient(
+        circle 300px at 20% 20%,
+        rgba(29, 78, 216, 0.08),
+        transparent
+      ),
+      radial-gradient(
+        circle 500px at 80% 80%,
+        rgba(29, 78, 216, 0.08),
+        transparent
+      ),
+      radial-gradient(
+        circle 400px at 100% 40%,
+        rgba(109, 40, 217, 0.04),
+        transparent
+      );
+  }
+
+  .dark #hero {
+    background: var(--background);
+
+    /* FIXED: Updated dark mode gradient to use new primary colors */
+    background-image: radial-gradient(
+        circle 300px at 20% 20%,
+        rgba(59, 130, 246, 0.15),
+        transparent
+      ),
+      radial-gradient(
+        circle 500px at 80% 80%,
+        rgba(59, 130, 246, 0.15),
+        transparent
+      ),
+      radial-gradient(
+        circle 400px at 100% 40%,
+        rgba(139, 92, 246, 0.08),
+        transparent
+      );
+  }
+
+  /* Hero section */
+  #hero {
     h1 {
       @apply md:mt-32 mt-40 text-4xl leading-none text-center font-inter font-bold;
       color: var(--foreground);
       filter: drop-shadow(
-        0 0 20px color-mix(in srgb, var(--primary) 30%, transparent)
+        0 0 10px color-mix(in srgb, var(--primary) 30%, transparent)
       );
-      text-shadow: 0 0 30px color-mix(in srgb, var(--primary) 20%, transparent);
     }
 
     .text-gradient {

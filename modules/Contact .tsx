@@ -1,13 +1,12 @@
 "use client";
-import { Button } from "@/common/Button"; // Adjust import path as needed
-import { Card } from "@/common/card"; // Adjust import path as needed
-import { Input } from "@/common/input"; // Adjust import path as needed
-import { Textarea } from "@/common/textarea"; // Adjust import path as needed
+import { Button } from "@/common/Button";
+import { Card } from "@/common/card";
+import { Input } from "@/common/input";
+import { Textarea } from "@/common/textarea";
 import { SOCIAL_INFO } from "@/utils/constants";
 import React, { useEffect, useState } from "react";
 import { z } from "zod";
 
-// Zod validation schema
 const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
   phone: z
@@ -24,7 +23,7 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>;
 
-const DirectOrder: React.FC<DirectOrderProps> = () => {
+const DirectOrder: React.FC = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [issue, setIssue] = useState("");
@@ -44,7 +43,7 @@ const DirectOrder: React.FC<DirectOrderProps> = () => {
     } catch (error) {
       if (error instanceof z.ZodError) {
         const fieldErrors: Partial<FormData> = {};
-        error?.errors.forEach((err) => {
+        error.issues.forEach((err: z.ZodIssue) => {
           if (err.path[0]) {
             fieldErrors[err.path[0] as keyof FormData] = err.message;
           }
@@ -95,7 +94,6 @@ const DirectOrder: React.FC<DirectOrderProps> = () => {
     }
   };
 
-  // If user has submitted before, show alternative contact options
   if (hasSubmittedBefore) {
     return (
       <div className="direct-order max-w-md mx-auto p-4">
@@ -141,18 +139,18 @@ const DirectOrder: React.FC<DirectOrderProps> = () => {
   }
 
   return (
-    <div className="py-20 px-6 bg-background">
+    <div className="py-20 px-6 ">
       <div className="direct-order max-w-6xl  mx-auto p-4">
         <Card className="p-6 w-full hover:translate-0 shadow-none ">
-          <h3 className="text-xl font-semibold mb-2 text-foreground">
+          <h3 className="text-xl font-semibold mb-2 text-[var(--foreground)]">
             Reach out to us
           </h3>
-          <p className="text-muted-foreground mb-4">
+          <p className="text-[var(--foreground)]/90 mb-4">
             Fill out this form and we'll call you back to confirm your request.
           </p>
 
           {formSubmitted ? (
-            <div className="success-message text-primary">
+            <div className="success-message text-[var(--primary)]">
               <p>
                 Thanks! We received your request and will get back to you soon.
               </p>
@@ -162,7 +160,7 @@ const DirectOrder: React.FC<DirectOrderProps> = () => {
               <div className="form-group">
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-foreground"
+                  className="block text-sm font-semibold  text-[var(--foreground)]"
                 >
                   Your Name
                 </label>
@@ -183,7 +181,7 @@ const DirectOrder: React.FC<DirectOrderProps> = () => {
               <div className="form-group">
                 <label
                   htmlFor="phone"
-                  className="block text-sm font-medium text-foreground"
+                  className="block text-sm font-semibold  text-[var(--foreground)]"
                 >
                   Phone Number
                 </label>
@@ -205,10 +203,10 @@ const DirectOrder: React.FC<DirectOrderProps> = () => {
               <div className="form-group">
                 <label
                   htmlFor="issue"
-                  className="block text-sm font-medium text-foreground"
+                  className="block text-sm font-semibold  text-[var(--foreground)]"
                 >
                   Issue / Notes
-                  <span className="text-muted-foreground text-xs ml-2">
+                  <span className="text-[var(--foreground)]/90 text-xs ml-2">
                     ({issue.length}/1000 characters)
                   </span>
                 </label>
@@ -235,12 +233,12 @@ const DirectOrder: React.FC<DirectOrderProps> = () => {
           )}
 
           {SOCIAL_INFO.phone && (
-            <div className="direct-contact mt-4 text-center">
-              <p className="text-muted-foreground">
+            <div className="direct-contact mt-6 text-center">
+              <p className="  text-[var(--foreground)]">
                 Or call us directly:{" "}
                 <a
                   href={`tel:${SOCIAL_INFO.phone}`}
-                  className="text-primary underline"
+                  className="text-[var(--primary)] underline"
                 >
                   {SOCIAL_INFO.phone}
                 </a>

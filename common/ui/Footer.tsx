@@ -7,30 +7,27 @@ function Footer() {
   return (
     <footer className="bg-primary-800 border-t border-primary-500 px-6 md:px-24 py-10 text-primary-100">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
-        {/* Left side - Logo and description */}
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-3">
             <Image
-              src="/logo.svg"
+              src="/logo.png"
               alt="Logo"
               width={36}
               height={36}
-              // className="w-12 h-12"
+              className="w-10 h-10 rounded-full"
             />
-            <span className="text-white text-xl font-semibold">Unibyte</span>
+            <span className="text-[var(--primary)] text-xl font-semibold">
+              FixIT
+            </span>
           </div>
-          <p className="text-sm max-w-xs text-yellow/75">
-            WHERE THE POWER OF 0s AND 1s UNITE!
-          </p>
         </div>
 
-        {/* Right side - Navigation */}
         <nav>
           <ul className="flex flex-wrap gap-6">
             <li>
               <Link
                 href="#about"
-                className="hover:text-white text-sm font-medium transition-colors duration-200"
+                className="hover:text-[var(--secondary)] text-sm font-medium transition-colors duration-200"
               >
                 About
               </Link>
@@ -38,7 +35,7 @@ function Footer() {
             <li>
               <Link
                 href="#events"
-                className="hover:text-white text-sm font-medium transition-colors duration-200"
+                className="hover:text-[var(--secondary)] text-sm font-medium transition-colors duration-200"
               >
                 Events
               </Link>
@@ -46,7 +43,7 @@ function Footer() {
             <li>
               <Link
                 href="#community"
-                className="hover:text-white text-sm font-medium transition-colors duration-200"
+                className="hover:text-[var(--secondary)] text-sm font-medium transition-colors duration-200"
               >
                 Community
               </Link>
@@ -54,7 +51,7 @@ function Footer() {
             <li>
               <Link
                 href="#contact"
-                className="hover:text-white text-sm font-medium transition-colors duration-200"
+                className="hover:text-[var(--secondary)] text-sm font-medium transition-colors duration-200"
               >
                 Contact
               </Link>
