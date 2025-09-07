@@ -116,7 +116,7 @@ body {
   color: var(--foreground);
   scroll-behavior: smooth;
   overflow-x: hidden;
-  font-family: "Inter", sans-serif;
+  /* font-family: "Inter", sans-serif; */
   min-height: 100vh;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -244,7 +244,7 @@ body {
   /* Hero section */
   #hero {
     h1 {
-      @apply md:mt-32 mt-40 text-4xl leading-none text-center font-inter font-bold;
+      @apply md:mt-32 mt-40 text-4xl leading-none text-center  font-bold;
       color: var(--foreground);
       filter: drop-shadow(
         0 0 10px color-mix(in srgb, var(--primary) 30%, transparent)

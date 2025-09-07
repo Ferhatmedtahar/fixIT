@@ -72,7 +72,7 @@ export default function NavBar() {
       <nav className="navbar fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-4 border-b border-gray-300">
         <div className="container mx-auto flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3 group">
-            <span className="text-2xl font-bold text-primary dark:text-primary font-inter">
+            <span className="text-2xl font-bold text-primary dark:text-primary">
               Fix<span className="">IT</span>
             </span>
           </Link>

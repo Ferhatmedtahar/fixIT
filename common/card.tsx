@@ -10,7 +10,7 @@ const Card = ({ className, ...props }: ICardProps) => {
   return (
     <div
       className={cn(
-        "font-head rounded-lg transition-all duration-[350ms] cursor-pointer",
+        " rounded-lg transition-all duration-[350ms] cursor-pointer",
         "inline-block border-2 border-b-3 border-r-3 border-[var(--foreground)]  ",
 
         "shadow-[2px_2px_0_var(--foreground)] hover:shadow-none hover:translate-y-1",

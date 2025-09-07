@@ -164,7 +164,7 @@ function Hero() {
 
         <div className="flex flex-col items-center gap-4 z-10 relative px-4 text-center max-w-4xl mx-auto w-full mb-32">
           <motion.h1
-            className="text-primary text-7xl md:text-[13vw] lg:text-[10vw] font-bold"
+            className="text-[var(--primary)]  text-7xl md:text-[13vw] lg:text-[10vw] "
             variants={titleVariants}
             initial="hidden"
             animate="visible"
@@ -187,7 +187,7 @@ function Hero() {
 
           <div className="flex flex-col items-center gap-2 -mt-4">
             <motion.p
-              className="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-4xl font-inter text-lg sm:text-xl md:text-2xl lg:text-3xl text-primary/80  font-semibold tracking-tight"
+              className="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-4xl  text-lg sm:text-xl md:text-2xl lg:text-3xl text-primary/80  font-semibold tracking-tight"
               variants={subtitleVariants}
               initial="hidden"
               animate="visible"
@@ -204,7 +204,7 @@ function Hero() {
             </motion.p>
 
             <motion.p
-              className="max-w-sm md:max-w-md lg:max-w-3xl text-primary/80  font-inter text-base md:text-lg lg:text-xl font-medium text-center leading-relaxed"
+              className="max-w-sm md:max-w-md lg:max-w-3xl text-primary/80  text-base md:text-lg lg:text-xl font-medium text-center leading-relaxed"
               variants={paragraphVariants}
               initial="hidden"
               animate="visible"

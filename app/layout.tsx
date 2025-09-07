@@ -1,9 +1,11 @@
 import { ThemeProvider } from "@/context/theme-provider";
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import Footer from "../common/ui/Footer";
 import NavBar from "../common/ui/NavBar";
 import favIcon from "../public/favicon.ico";
 import "./globals.css";
+
 export const metadata: Metadata = {
   title: "FixIT | Ammar Telidji University",
   metadataBase: new URL("https://unibyte-site.vercel.app/"),
@@ -73,6 +75,33 @@ UniByte is your launchpad for personal growth, meaningful collaboration, and rea
   },
 };
 
+const discord_font = localFont({
+  src: [
+    {
+      path: "../fonts/Discord/6284e0f599173e62453ac15f_Ginto Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Discord/628637495e0b73615e1e27b6_Ginto Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Discord/6286374983556efc2e78b45c_Ginto Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Discord/625933f807781e4a4303f1cb_Ginto Nord Black.ttf",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-discord",
+  display: "swap",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -81,7 +110,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={` antialiased selection:bg-primary-800 selection:text-primary-50`}
+        className={` ${discord_font.className}  antialiased selection:bg-primary selection:text-white`}
       >
         <ThemeProvider
           attribute="class"
@@ -90,6 +119,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <NavBar />
+
           {children}
           <Footer />
         </ThemeProvider>

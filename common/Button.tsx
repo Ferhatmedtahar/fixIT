@@ -4,7 +4,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import React, { ButtonHTMLAttributes } from "react";
 
 const buttonVariants = cva(
-  "font-head rounded-lg shadow-[1px_1px_0_var(--foreground)]  transition-all outline-hidden cursor-pointer  duration-300 font-medium flex items-center justify-center",
+  " rounded-lg shadow-[1px_1px_0_var(--foreground)]  transition-all outline-hidden cursor-pointer  duration-300 font-medium flex items-center justify-center",
   {
     variants: {
       variant: {
