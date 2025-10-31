@@ -156,7 +156,7 @@ function Hero() {
           {/* Title */}
           <motion.h1
             key={language}
-            className="text-[var(--foreground)] text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-nowrap font-black tracking-tighter uppercase leading-none"
+            className="text-[var(--foreground)] text-6xl sm:text-7xl md:text-8xl lg:text-9xl md:text-nowrap font-black tracking-tighter uppercase leading-none"
             variants={titleVariants}
             initial="hidden"
             animate="visible"
