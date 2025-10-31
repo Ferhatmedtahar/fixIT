@@ -1,8 +1,8 @@
 "use client";
 import { Button } from "@/common/Button";
-import { Card } from "@/common/card";
-import { Input } from "@/common/input";
-import { Textarea } from "@/common/textarea";
+import { Card } from "@/common/ui/card";
+import { Input } from "@/common/ui/input";
+import { Textarea } from "@/common/ui/textarea";
 import { useLanguage } from "@/context/language-provider";
 import { SOCIAL_INFO } from "@/utils/constants";
 import React, { useEffect, useState } from "react";
@@ -305,7 +305,7 @@ const DirectOrder: React.FC = () => {
                 )}
               </div>
 
-              <Button type="submit" className="w-full">
+              <Button type="submit" variant="secondary" className="w-full">
                 {t("form.submit")}
               </Button>
             </form>

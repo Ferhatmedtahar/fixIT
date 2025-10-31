@@ -6,7 +6,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/common/drop-down";
+} from "@/common/ui/drop-down";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 

@@ -3,7 +3,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import React, { TextareaHTMLAttributes } from "react";
 
 const textareaVariants = cva(
-  "rounded-lg  shadow-[1px_1px_0_var(--foreground)] transition-all duration-[350ms] w-full border-2  border-b-3 border-r-3 border-[var(--foreground)] focus:outline-hidden disabled:cursor-not-allowed disabled:opacity-50 min-h-16",
+  "shadow-[1px_1px_0_var(--foreground)] transition-all duration-[350ms] w-full border-2  border-b-3 border-r-3 border-[var(--foreground)] focus:outline-hidden disabled:cursor-not-allowed disabled:opacity-50 min-h-16",
   {
     variants: {
       variant: {

@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { HTMLAttributes } from "react";
-import { Text } from "./ui/Text";
+import { Text } from "./Text";
 
 interface ICardProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -10,7 +10,7 @@ const Card = ({ className, ...props }: ICardProps) => {
   return (
     <div
       className={cn(
-        " rounded-lg transition-all duration-[350ms] cursor-pointer",
+        "  transition-all duration-[350ms] cursor-pointer",
         "inline-block border-2 border-b-3 border-r-3 border-[var(--foreground)]  ",
 
         "shadow-[2px_2px_0_var(--foreground)] hover:shadow-none hover:translate-y-1",

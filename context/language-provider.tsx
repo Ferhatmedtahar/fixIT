@@ -27,7 +27,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.system": "System",
 
     // Hero Section
-    "hero.title": "FixIT",
+    "hero.title": "Glados Zone",
     "hero.subtitle": "YOUR TECH PROBLEMS, OUR SOLUTIONS",
     "hero.description":
       "Professional computer repair and IT support services you can trust",
@@ -142,7 +142,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.system": "النظام",
 
     // Hero Section
-    "hero.title": "فيكسيت",
+    "hero.title": "Glados Zone",
     "hero.subtitle": "مشاكلك التقنية، حلولنا",
     "hero.description":
       "خدمات إصلاح الحاسوب والدعم التقني الاحترافية والموثوقة",
@@ -254,7 +254,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.system": "Système",
 
     // Hero Section
-    "hero.title": "FixIT",
+    "hero.title": "Glados Zone",
     "hero.subtitle": "VOS PROBLÈMES TECH, NOS SOLUTIONS",
     "hero.description":
       "Services professionnels de réparation d'ordinateurs et de support IT de confiance",

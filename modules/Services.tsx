@@ -1,5 +1,5 @@
 "use client";
-import { Card } from "@/common/card"; // Adjust import path as needed
+import { Card } from "@/common/ui/card"; // Adjust import path as needed
 import { useLanguage } from "@/context/language-provider";
 import { motion } from "motion/react";
 

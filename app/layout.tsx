@@ -7,12 +7,12 @@ import NavBar from "../common/ui/NavBar";
 import favIcon from "../public/favicon.ico";
 import "./globals.css";
 export const metadata: Metadata = {
-  title: "FixIT | Professional Computer Repair Services",
+  title: "Glados Zone | Professional Computer Repair Services",
   metadataBase: new URL("https://fix-it-pi.vercel.app/"),
-  description: `FixIT - Professional computer repair and trusted IT support services. 
+  description: `Glados Zone - Professional computer repair and trusted IT support services. 
 Fast and affordable IT support for students and everyday users at Ammar Telidji University, Laghouat.`,
   keywords: [
-    "FixIT",
+    "Glados Zone",
     "computer repair",
     "IT support",
     "computer troubleshooting",
@@ -28,7 +28,7 @@ Fast and affordable IT support for students and everyday users at Ammar Telidji 
     "student IT services",
   ],
   openGraph: {
-    title: "FixIT | Your Tech Problems, Our Solutions",
+    title: "Glados Zone | Your Tech Problems, Our Solutions",
     description:
       "Professional computer repair and trusted IT support services. Fast and affordable IT support in Laghouat, Algeria.",
     url: "https://fix-it-pi.vercel.app/",
@@ -50,7 +50,7 @@ Fast and affordable IT support for students and everyday users at Ammar Telidji 
   },
   twitter: {
     card: "summary_large_image",
-    title: "FixIT | Professional Computer Repair Services",
+    title: "Glados Zone | Professional Computer Repair Services",
     description:
       "Fast and affordable IT support for students and everyday users. Troubleshooting, OS installation, virus removal and more in Laghouat, Algeria.",
     images: [],

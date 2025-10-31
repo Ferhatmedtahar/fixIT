@@ -5,7 +5,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/common/drop-down";
+} from "@/common/ui/drop-down";
 import { Language, useLanguage } from "@/context/language-provider";
 import { SOCIAL_INFO } from "@/utils/constants";
 import { useGSAP } from "@gsap/react";
@@ -14,6 +14,7 @@ import { Globe, Mail, Moon, Phone, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useState } from "react";
+import Logo from "../Logo";
 
 const NAVBAR_ITEMS = [
   { id: "hero", title: "nav.home" },
@@ -116,11 +117,7 @@ export default function NavBar() {
     <>
       <nav className="navbar fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-4 border-b border-gray-300">
         <div className="container mx-auto flex justify-between items-center">
-          <Link href="/" className="flex items-center gap-3 group">
-            <span className="text-2xl font-bold text-[var(--primary)] ">
-              Fix<span className="">IT</span>
-            </span>
-          </Link>
+          <Logo />
 
           <div className="hidden md:flex items-center gap-8">
             {NAVBAR_ITEMS.map((item) => (

@@ -1,5 +1,5 @@
 "use client";
-import { Card } from "@/common/card";
+import { Card } from "@/common/ui/card";
 import { useLanguage } from "@/context/language-provider";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
