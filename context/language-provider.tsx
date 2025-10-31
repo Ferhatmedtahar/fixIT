@@ -44,7 +44,7 @@ const translations: Record<Language, Record<string, string>> = {
     "location.phone": "Phone",
     "location.phoneValue": "Available on campus",
     "location.email": "Email",
-    "location.emailValue": "contact@support.dz",
+    "location.emailValue": "glados.zone@gmail.com",
     "location.hours": "Service Hours",
     "location.weekdays": "Sunday - Thursday",
     "location.weekdaysHours": "8:00 AM - 5:00 PM",
@@ -86,9 +86,9 @@ const translations: Record<Language, Record<string, string>> = {
 
     // FAQ Section
     "faq.title": "Frequently Asked Questions",
-    "faq.q1": "What is FixIT?",
+    "faq.q1": "What is Glados Zone?",
     "faq.a1":
-      "FixIT provides fast and affordable computer repair and IT support services for students and everyday users.",
+      "Glados Zone provides fast and affordable computer repair and IT support services for students and everyday users.",
     "faq.q2": "What services do you offer?",
     "faq.a2":
       "We handle software troubleshooting, operating system installation (Windows, Linux, ...), performance optimization, virus and malware removal, and more.",
@@ -127,7 +127,7 @@ const translations: Record<Language, Record<string, string>> = {
     "form.issueRequired": "Issue description is required",
     "form.issueMaxLength":
       "Issue description must be less than 1000 characters",
-    "footer.copyright": "FixIT. All rights reserved.",
+    "footer.copyright": "Glados Zone. All rights reserved.",
   },
 
   ar: {
@@ -159,7 +159,7 @@ const translations: Record<Language, Record<string, string>> = {
     "location.phone": "الهاتف",
     "location.phoneValue": "متاح داخل الحرم الجامعي",
     "location.email": "البريد الإلكتروني",
-    "location.emailValue": "contact@support.dz",
+    "location.emailValue": "glados.zone@gmail.com",
     "location.hours": "ساعات العمل",
     "location.weekdays": "الأحد – الخميس",
     "location.weekdaysHours": "8:00 ص – 5:00 م",
@@ -239,7 +239,7 @@ const translations: Record<Language, Record<string, string>> = {
       "يجب أن يحتوي الهاتف على 10 أرقام ويبدأ بـ 05 أو 06 أو 07",
     "form.issueRequired": "وصف المشكلة مطلوب",
     "form.issueMaxLength": "يجب أن يكون وصف المشكلة أقل من 1000 حرف",
-    "footer.copyright": "FixIT. جميع الحقوق محفوظة.",
+    "footer.copyright": "Glados Zone. جميع الحقوق محفوظة.",
   },
 
   fr: {
@@ -271,7 +271,7 @@ const translations: Record<Language, Record<string, string>> = {
     "location.phone": "Téléphone",
     "location.phoneValue": "Disponible sur le campus",
     "location.email": "Email",
-    "location.emailValue": "contact@support.dz",
+    "location.emailValue": "glados.zone@gmail.com",
     "location.hours": "Heures de Service",
     "location.weekdays": "Dimanche - Jeudi",
     "location.weekdaysHours": "8h00 - 17h00",
@@ -356,7 +356,7 @@ const translations: Record<Language, Record<string, string>> = {
     "form.issueMaxLength":
       "La description du problème doit être inférieure à 1000 caractères",
 
-    "footer.copyright": "FixIT. Tous droits reservés.",
+    "footer.copyright": "Glados Zone. Tous droits reservés.",
   },
 };
 
