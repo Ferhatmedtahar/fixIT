@@ -7,9 +7,9 @@ export const SOCIAL_INFO = {
 
 export const faqData = [
   {
-    question: "What is FixIT?",
+    question: "What is Glados Zone?",
     answer:
-      "FixIT provides quick, affordable computer repair and IT support services for students and everyday users.",
+      "Glados Zone provides quick, affordable computer repair and IT support services for students and everyday users.",
   },
   {
     question: "Which services do you offer?",

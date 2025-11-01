@@ -32,7 +32,7 @@ Fast and affordable IT support for students and everyday users at Ammar Telidji 
     description:
       "Professional computer repair and trusted IT support services. Fast and affordable IT support in Laghouat, Algeria.",
     url: "https://fix-it-pi.vercel.app/",
-    siteName: "FixIT",
+    siteName: "Glados Zone",
     images: [],
     locale: "en_US",
     type: "website",
