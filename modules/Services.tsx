@@ -1,5 +1,6 @@
 "use client";
 import { Card } from "@/common/ui/card"; // Adjust import path as needed
+import Seperator from "@/common/ui/Seperator";
 import { useLanguage } from "@/context/language-provider";
 import { motion } from "motion/react";
 
@@ -148,7 +149,10 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/60 to-primary opacity-60"></div>
+        {/* <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/60 to-primary opacity-60"></div> */}
+
+        {/* <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--foreground)]/90 to-[var(--foreground)] opacity-20"></div> */}
+        <Seperator />
       </section>
     </div>
   );

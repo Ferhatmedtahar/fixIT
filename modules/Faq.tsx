@@ -1,5 +1,6 @@
 "use client";
 import { Card } from "@/common/ui/card";
+import Seperator from "@/common/ui/Seperator";
 import { useLanguage } from "@/context/language-provider";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -67,7 +68,7 @@ function Faq() {
             {t("faq.title")}
           </h2> */}
 
-          <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4 text-center ">
             {t("faq.title")}
           </h2>
           <Card className="divide-y divide-border px-4 hover:translate-0 shadow-none">
@@ -115,7 +116,8 @@ function Faq() {
           </Card>
         </div>
       </section>
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/60 to-primary opacity-60"></div>
+      {/* <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--foreground)]/90 to-[var(--foreground)] opacity-20"></div> */}
+      <Seperator />
     </div>
   );
 }
