@@ -10,7 +10,7 @@ import { Language, useLanguage } from "@/context/language-provider";
 import { SOCIAL_INFO } from "@/utils/constants";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { Globe, Mail, Moon, Phone, Sun } from "lucide-react";
+import { Globe, Mail, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useState } from "react";
@@ -133,15 +133,6 @@ export default function NavBar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <Link
-              href={`tel:${SOCIAL_INFO.phone}`}
-              className="flex items-center gap-2 text-[var(--primary)] hover:text-[var(--foreground)] transition-colors duration-300"
-            >
-              <Phone className="w-4 h-4" />
-              <span dir="ltr" className="text-sm font-medium">
-                {SOCIAL_INFO.phone}
-              </span>
-            </Link>
             <LanguageToggle />
             <ModeToggle />
           </div>
@@ -198,14 +189,6 @@ export default function NavBar() {
           </nav>
 
           <div className="mt-12 flex flex-col items-center gap-4">
-            <Link
-              href={`tel:${SOCIAL_INFO.phone}`}
-              onClick={closeMobileMenu}
-              className="flex items-center gap-3 text-[var(--primary)] hover:text-secondary-400 transition-colors duration-300"
-            >
-              <Phone className="w-5 h-5" />
-              <span className="text-lg font-medium">{SOCIAL_INFO.phone}</span>
-            </Link>
             <Link
               href={`mailto:${SOCIAL_INFO.email}`}
               onClick={closeMobileMenu}

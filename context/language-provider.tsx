@@ -41,7 +41,7 @@ const translations: Record<Language, Record<string, string>> = {
     "location.contact": "Contact Information",
     "location.address": "Address",
     "location.addressValue": "Laghouat, Algeria",
-    "location.phone": "Phone",
+    "location.phone": "Instagram",
     "location.phoneValue": "+213 796 97 33 17",
     "location.email": "Email",
     "location.emailValue": "glados.zone@gmail.com",
@@ -105,7 +105,7 @@ const translations: Record<Language, Record<string, string>> = {
       "Students are our primary focus, but we can help anyone who needs reliable tech support on campus.",
     "faq.q5": "How can I contact you?",
     "faq.a5":
-      "You can visit us on campus, email us at contact@support.dz, or drop by during our service hours (Sunday–Thursday 8:00–17:00).",
+      "You can visit us on campus, email us at glados.zone@gmail.com, or drop by during our service hours (Sunday–Thursday 8:00–17:00).",
 
     // Contact Form
     "form.title": "Contact Us",
@@ -225,7 +225,7 @@ const translations: Record<Language, Record<string, string>> = {
       "الطلاب هم تركيزنا الأساسي، لكن يمكننا مساعدة أي شخص يحتاج إلى دعم تقني موثوق داخل الحرم.",
     "faq.q5": "كيف يمكنني التواصل معكم؟",
     "faq.a5":
-      "يمكنك زيارتنا في الحرم، أو مراسلتنا عبر البريد الإلكتروني contact@support.dz، أو الحضور في ساعات عملنا (الأحد–الخميس 8:00–17:00).",
+      "يمكنك زيارتنا في الحرم، أو مراسلتنا عبر البريد الإلكتروني glados.zone@gmail.com، أو الحضور في ساعات عملنا (الأحد–الخميس 8:00–17:00).",
 
     // Contact Form
     "form.title": "تواصل معنا",
@@ -343,7 +343,7 @@ const translations: Record<Language, Record<string, string>> = {
       "Les étudiants sont notre focus principal, mais nous pouvons aider quiconque a besoin d'un support informatique fiable sur le campus.",
     "faq.q5": "Comment puis-je vous contacter?",
     "faq.a5":
-      "Vous pouvez nous visiter sur le campus, nous envoyer un email à contact@support.dz, ou passer pendant nos heures de service (Dimanche–Jeudi 8h00–17h00).",
+      "Vous pouvez nous visiter sur le campus, nous envoyer un email à glados.zone@gmail.com, ou passer pendant nos heures de service (Dimanche–Jeudi 8h00–17h00).",
 
     // Contact Form
     "form.title": "Contactez-nous",

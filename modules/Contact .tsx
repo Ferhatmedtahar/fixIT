@@ -160,19 +160,6 @@ const DirectOrder: React.FC = () => {
             </p>
 
             <div className="space-y-4">
-              {SOCIAL_INFO.phone && (
-                <div className="contact-option">
-                  <h4 className="font-semibold text-lg mb-2 text-[var(--foreground)]">
-                    {t("form.callUs")}
-                  </h4>
-                  <Button asChild>
-                    <a dir="ltr" href={`tel:${SOCIAL_INFO.phone}`}>
-                      {SOCIAL_INFO.phone}
-                    </a>
-                  </Button>
-                </div>
-              )}
-
               {SOCIAL_INFO.email && (
                 <div className="contact-option">
                   <h4 className="font-semibold text-lg mb-2 text-[var(--foreground)]">
@@ -311,7 +298,7 @@ const DirectOrder: React.FC = () => {
             </form>
           )}
 
-          {SOCIAL_INFO.phone && (
+          {/* {SOCIAL_INFO.phone && (
             <div className="direct-contact mt-6 text-center">
               <p className="text-[var(--foreground)]">
                 {t("form.callDirect")}{" "}
@@ -323,7 +310,7 @@ const DirectOrder: React.FC = () => {
                 </a>
               </p>
             </div>
-          )}
+          )} */}
         </Card>
       </div>
     </section>
