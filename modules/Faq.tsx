@@ -80,7 +80,7 @@ function Faq() {
                     dir === "rtl" ? "right" : "left"
                   } flex items-start ${
                     dir === "rtl" ? "flex-row-reverse" : ""
-                  } justify-between gap-4 hover:bg-[var(--secondary)/10] transition-colors duration-200 focus:outline-none focus:bg-[var(--secondary)/20] rounded-lg px-2`}
+                  } justify-between gap-4 hover:bg-[var(--secondary)/10] transition-colors duration-200 focus:outline-none focus:bg-[var(--secondary)/20]  px-2`}
                 >
                   <span className="text-[15px] leading-6 font-medium text-[var(--primary)] flex-1 hover:no-underline">
                     {item.question}

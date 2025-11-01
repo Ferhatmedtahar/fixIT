@@ -10,10 +10,10 @@ export default function Home() {
     <main className="overflow-hidden flex flex-col ">
       <Hero />
       <Services />
-      <Location />
-      <Socials />
       <Faq />
+      <Location />
       <Contact />
+      <Socials />
     </main>
   );
 }

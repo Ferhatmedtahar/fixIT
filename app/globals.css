@@ -97,6 +97,7 @@
 
 html,
 body {
+  font-family: var(--font-discord);
   width: 100%;
   background: var(--background);
   color: var(--foreground);
@@ -105,7 +106,10 @@ body {
   min-height: 100vh;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
+body[dir="rtl"],
+body.arabic {
+  font-family: var(--font-amiri);
+}
 @utility flex-center {
   @apply flex justify-center items-center;
 }
@@ -316,7 +320,7 @@ body {
           }
 
           a {
-            @apply p-4 rounded-2xl font-semibold text-white 
+            @apply p-4  font-semibold text-white 
                    transition-all duration-300 transform hover:cursor-pointer 
                    hover:scale-105 2xl:text-start text-center
                    relative overflow-hidden;
@@ -365,7 +369,7 @@ body {
   .tech-card {
     background: color-mix(in srgb, var(--card) 90%, transparent);
     border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
-    @apply rounded-3xl p-6 backdrop-filter backdrop-blur-lg
+    @apply p-6 backdrop-filter backdrop-blur-lg
            hover:shadow-xl transition-all duration-300;
 
     &:hover {
@@ -377,7 +381,7 @@ body {
 
   /* Animated tech buttons */
   .tech-button {
-    @apply relative overflow-hidden rounded-2xl px-6 py-3
+    @apply relative overflow-hidden  px-6 py-3
            font-semibold transition-all duration-300 transform hover:scale-105;
 
     background: var(--primary);

@@ -149,7 +149,7 @@ const DirectOrder: React.FC = () => {
 
   if (hasSubmittedBefore) {
     return (
-      <div className="direct-order max-w-md mx-auto p-4" dir={dir}>
+      <div className="direct-order max-w-6xl mx-auto p-4" dir={dir}>
         <Card className="p-6">
           <h3 className="text-xl font-semibold mb-2 text-center text-[var(--foreground)]">
             {t("form.alreadySubmitted")}
@@ -194,7 +194,7 @@ const DirectOrder: React.FC = () => {
 
   return (
     <section id="contact" className="py-20 px-6" dir={dir}>
-      <div className="direct-order max-w-6xl mx-auto p-4">
+      <div className="direct-order max-w-6xl mx-auto ">
         <Card className="p-6 w-full hover:translate-0 shadow-none">
           <h3 className="text-xl font-semibold mb-2 text-[var(--foreground)]">
             {t("form.title")}
@@ -305,7 +305,7 @@ const DirectOrder: React.FC = () => {
                 )}
               </div>
 
-              <Button type="submit" variant="secondary" className="w-full">
+              <Button type="submit" variant="secondary" className="w-full p-4">
                 {t("form.submit")}
               </Button>
             </form>

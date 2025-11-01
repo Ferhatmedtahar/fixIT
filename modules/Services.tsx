@@ -70,11 +70,11 @@ const Services = () => {
 
   return (
     <div className="relative" dir={dir}>
-      <section id="services" className="min-h-screen">
-        <div className="py-20 px-6">
-          <div className="max-w-4xl mx-auto">
+      <section id="services" className="">
+        <div className="py-28 px-6">
+          <div className="max-w-6xl mx-auto">
             <motion.div
-              className="text-center mb-16"
+              className="text-center mb-4"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
@@ -119,7 +119,7 @@ const Services = () => {
                             dir === "rtl" ? "space-x-reverse" : ""
                           }`}
                         >
-                          <div className="w-2 h-2 bg-[var(--primary)] rounded-full mt-3 flex-shrink-0"></div>
+                          <div className="w-2 h-2 bg-[var(--primary)]  mt-3 flex-shrink-0"></div>
                           <div>
                             <h4 className="font-semibold mb-2">
                               {t(service.titleKey)}
