@@ -119,7 +119,7 @@ export default function NavBar() {
         <div className="container mx-auto flex justify-between items-center">
           <Logo />
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8">
             {NAVBAR_ITEMS.map((item) => (
               <Link
                 key={item.id}
@@ -146,7 +146,7 @@ export default function NavBar() {
             <ModeToggle />
           </div>
 
-          <div className="flex items-center gap-3 md:hidden">
+          <div className="flex items-center gap-3 lg:hidden">
             <LanguageToggle />
             <ModeToggle />
             <button
@@ -174,7 +174,7 @@ export default function NavBar() {
       </nav>
 
       <div
-        className={`fixed inset-0 bg-neutral-900/40 backdrop-blur-lg z-40 md:hidden transition-all duration-300 ${
+        className={`fixed inset-0 bg-neutral-900/40 backdrop-blur-lg z-40 lg:hidden transition-all duration-300 ${
           isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
         onClick={closeMobileMenu}
@@ -209,7 +209,7 @@ export default function NavBar() {
             <Link
               href={`mailto:${SOCIAL_INFO.email}`}
               onClick={closeMobileMenu}
-              className="flex items-center gap-3  text-[var(--secondary)] hover:text-primary-400 transition-colors duration-300"
+              className="flex items-center gap-3  text-[var(--primary)] hover:text-primary-400 transition-colors duration-300"
             >
               <Mail className="w-5 h-5" />
               <span className="text-lg font-medium">{SOCIAL_INFO.email}</span>
@@ -217,7 +217,7 @@ export default function NavBar() {
           </div>
 
           <div className="mt-8 text-center">
-            <p className="text-neutral-400 text-sm font-medium">
+            <p className="text-neutral-700 dark:text-neutral-300 text-sm font-medium">
               {t("mobile.tagline")}
             </p>
           </div>

@@ -102,7 +102,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={` ${discord_font.className}  antialiased selection:bg-primary selection:text-white`}
+        className={` ${discord_font.className}  antialiased selection:bg-[var(--foreground)] selection:text-[var(--background)]  `}
       >
         <ThemeProvider
           attribute="class"

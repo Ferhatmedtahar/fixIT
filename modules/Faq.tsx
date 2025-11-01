@@ -60,13 +60,16 @@ function Faq() {
   };
 
   return (
-    <div className="py-8 px-6 self-center " dir={dir}>
-      <section id="faq" className="mx-auto max-w-6xl w-full px-4 ">
-        <div className="space-y-6 w-full">
-          <h2 className="text-center text-4xl md:text-6xl  pb-4 font-bold bg-gradient-to-r from-primary via-primary/70 to-primary bg-clip-text text-transparent mb-4">
+    <div className=" relative  " dir={dir}>
+      <section id="faq" className="mx-auto py-16 px-6  max-w-6xl w-full  ">
+        <div className="space-y-6 w-full flex flex-col items-center  gap-4">
+          {/* <h2 className="text-center text-4xl md:text-6xl  pb-4 font-bold bg-gradient-to-r from-primary via-primary/70 to-primary bg-clip-text text-transparent mb-4">
+            {t("faq.title")}
+          </h2> */}
+
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4">
             {t("faq.title")}
           </h2>
-
           <Card className="divide-y divide-border px-4 hover:translate-0 shadow-none">
             {faqData.map((item, index) => (
               <div key={index} className="py-2">
@@ -112,6 +115,7 @@ function Faq() {
           </Card>
         </div>
       </section>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/60 to-primary opacity-60"></div>
     </div>
   );
 }

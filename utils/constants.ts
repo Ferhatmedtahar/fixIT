@@ -1,7 +1,7 @@
 export const SOCIAL_INFO = {
-  email: "email@gmail.com",
-  instagram: "https://instagram.com",
-  facebook: "https://facebook.com",
+  email: "glados.zone@gmail.com",
+  instagram: "https://www.instagram.com/glados.zone/",
+  linkedin: "https://www.linkedin.com/company/glados-zone/",
   phone: "+213 796 97 33 17",
 };
 

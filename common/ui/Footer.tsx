@@ -1,8 +1,9 @@
 "use client";
 import { useLanguage } from "@/context/language-provider";
 import { SOCIAL_INFO } from "@/utils/constants";
-import { Facebook, Instagram, Mail } from "lucide-react";
+import { Instagram, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
+import Logo from "../Logo";
 const NAVBAR_ITEMS = [
   { id: "hero", title: "nav.home" },
   { id: "services", title: "nav.services" },
@@ -15,11 +16,7 @@ function Footer() {
     <footer className="bg-primary-800 border-t border-primary-500 px-6 md:px-24 py-10 text-primary-100">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
         <div className="flex flex-col gap-3">
-          <div className="flex items-center gap-3">
-            <span className="text-[var(--primary)] text-xl font-semibold">
-              {t("hero.title")}
-            </span>
-          </div>
+          <Logo />
         </div>
 
         <nav>
@@ -48,10 +45,10 @@ function Footer() {
           </Link>
           <Link
             className="flex items-center gap-2 hover:text-blue-300 transition-all duration-200"
-            href={SOCIAL_INFO.facebook}
+            href={SOCIAL_INFO.linkedin}
             target="_blank"
           >
-            <Facebook className="h-6 w-6 text-blue-500" />
+            <Linkedin className="h-6 w-6 text-blue-500" />
           </Link>
           <Link
             className="flex items-center gap-2 hover:text-pink-200 transition-all duration-200"

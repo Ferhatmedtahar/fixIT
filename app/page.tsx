@@ -3,6 +3,7 @@ import Faq from "@/modules/Faq";
 import Hero from "@/modules/Hero";
 import Location from "@/modules/Location";
 import Services from "@/modules/Services";
+import Socials from "@/modules/Socials";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Location />
+      <Socials />
       <Faq />
       <Contact />
     </main>

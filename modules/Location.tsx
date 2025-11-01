@@ -144,11 +144,11 @@ function Location() {
           </div>
 
           <div className="mt-12 text-center">
-            <Card className="p-8 text-center bg-primary/95 w-full ">
-              <h3 className="text-xl font-semibold dark:text-white text-[var(--foreground)] mb-2">
+            <Card className="p-8 text-center  w-full hover:shadow-none hover:translate-none ">
+              <h3 className="text-xl font-semibold  mb-2">
                 {t("location.help")}
               </h3>
-              <p className="text-[var(--foreground)]/90  dark:text-white mb-4">
+              <p className="text-[var(--foreground)]/90  mb-4">
                 {t("location.helpDescription")}
               </p>
               <Button className="inline-flex items-center">

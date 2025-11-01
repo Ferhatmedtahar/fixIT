@@ -9,7 +9,7 @@ function Logo() {
         Glados Zone
       </span> */}
       <Image src="/glados.svg" alt="Glados Zone Logo" width={30} height={30} />
-      <span className=" text-2xl font-bold text-[var(--primary)] ">
+      <span className=" text-2xl font-bold text-[var(--primary)] hidden sm:inline-block group-hover:text-[var(--foreground)] transition-colors duration-300">
         Glados Zone
       </span>
     </Link>

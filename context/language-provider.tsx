@@ -42,7 +42,7 @@ const translations: Record<Language, Record<string, string>> = {
     "location.address": "Address",
     "location.addressValue": "Laghouat, Algeria",
     "location.phone": "Phone",
-    "location.phoneValue": "Available on campus",
+    "location.phoneValue": "+213 796 97 33 17",
     "location.email": "Email",
     "location.emailValue": "glados.zone@gmail.com",
     "location.hours": "Service Hours",
@@ -83,6 +83,11 @@ const translations: Record<Language, Record<string, string>> = {
     "services.virus.title": "Virus & Malware Cleanup",
     "services.virus.description":
       "Removing harmful files and keeping your data safe",
+    //socials
+    "socials.title": "Connect With Us",
+    "socials.subtitle": "Follow us on social media or reach out via email",
+    "socials.callToAction":
+      "We're active on all platforms and respond quickly!",
 
     // FAQ Section
     "faq.title": "Frequently Asked Questions",
@@ -157,7 +162,7 @@ const translations: Record<Language, Record<string, string>> = {
     "location.address": "العنوان",
     "location.addressValue": "الأغواط، الجزائر",
     "location.phone": "الهاتف",
-    "location.phoneValue": "متاح داخل الحرم الجامعي",
+    "location.phoneValue": "+213 796 97 33 17",
     "location.email": "البريد الإلكتروني",
     "location.emailValue": "glados.zone@gmail.com",
     "location.hours": "ساعات العمل",
@@ -197,6 +202,12 @@ const translations: Record<Language, Record<string, string>> = {
     "services.virus.title": "تنظيف الفيروسات والبرامج الضارة",
     "services.virus.description":
       "إزالة الملفات الضارة والحفاظ على أمان بياناتك",
+
+    // socials
+    "socials.title": "تواصل معنا",
+    "socials.subtitle":
+      "تابعنا على وسائل التواصل الاجتماعي أو راسلنا عبر البريد الإلكتروني",
+    "socials.callToAction": "نحن نشطون على جميع المنصات ونستجيب بسرعة!",
 
     // FAQ Section
     "faq.title": "الأسئلة الشائعة",
@@ -269,7 +280,7 @@ const translations: Record<Language, Record<string, string>> = {
     "location.address": "Adresse",
     "location.addressValue": "Laghouat, Algérie",
     "location.phone": "Téléphone",
-    "location.phoneValue": "Disponible sur le campus",
+    "location.phoneValue": "+213 796 97 33 17",
     "location.email": "Email",
     "location.emailValue": "glados.zone@gmail.com",
     "location.hours": "Heures de Service",
@@ -310,7 +321,12 @@ const translations: Record<Language, Record<string, string>> = {
     "services.virus.title": "Nettoyage Virus et Malwares",
     "services.virus.description":
       "Suppression des fichiers nuisibles et protection de vos données",
-
+    //socials
+    "socials.title": "Connectez-vous Avec Nous",
+    "socials.subtitle":
+      "Suivez-nous sur les réseaux sociaux ou contactez-nous par email",
+    "socials.callToAction":
+      "Nous sommes actifs sur toutes les plateformes et répondons rapidement!",
     // FAQ Section
     "faq.title": "Questions Fréquemment Posées",
     "faq.q1": "Qu'est-ce que RéparerIT?",

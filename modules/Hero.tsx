@@ -230,11 +230,11 @@ function Hero() {
           >
             {/* Button 1 */}
             <motion.div
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              // whileHover={{ scale: 1.01 }}
+              // whileTap={{ scale: 0.99 }}
               className="relative group"
             >
-              <div className="absolute inset-0 bg-[var(--foreground)]/70 translate-x-1 translate-y-1 transition-transform group-hover:translate-x-1.5 group-hover:translate-y-1.5" />
+              {/* <div className="absolute inset-0 bg-[var(--foreground)]/70 translate-x-1 translate-y-1 transition-transform group-hover:translate-x-1.5 group-hover:translate-y-1.5" /> */}
               <Link href="#services">
                 <Button className="relative" variant="secondary" size="lg">
                   {t("hero.services")}
@@ -244,11 +244,11 @@ function Hero() {
 
             {/* Button 2 */}
             <motion.div
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              // whileHover={{ scale: 1.01 }}
+              // whileTap={{ scale: 0.99 }}
               className="relative group"
             >
-              <div className="absolute inset-0 bg-[var(--foreground)]/20 translate-x-1 translate-y-1 transition-transform group-hover:translate-x-1.5 group-hover:translate-y-1.5" />
+              {/* <div className="absolute inset-0 bg-[var(--foreground)]/20 translate-x-1 translate-y-1 transition-transform group-hover:translate-x-1.5 group-hover:translate-y-1.5" /> */}
               <Link href="#contact">
                 <Button className="relative" variant="default" size="lg">
                   {t("hero.support")}
