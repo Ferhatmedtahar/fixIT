@@ -8,7 +8,7 @@ import favIcon from "../public/favicon.ico";
 import "./globals.css";
 export const metadata: Metadata = {
   title: "Glados Zone | Professional Computer Repair Services",
-  metadataBase: new URL("https://fix-it-pi.vercel.app/"),
+  metadataBase: new URL("https://glados-zone.vercel.app/"),
   description: `Glados Zone - Professional computer repair and trusted IT support services. 
 Fast and affordable IT support for students and everyday users at Ammar Telidji University, Laghouat.`,
   keywords: [
@@ -31,7 +31,7 @@ Fast and affordable IT support for students and everyday users at Ammar Telidji 
     title: "Glados Zone | Your Tech Problems, Our Solutions",
     description:
       "Professional computer repair and trusted IT support services. Fast and affordable IT support in Laghouat, Algeria.",
-    url: "https://fix-it-pi.vercel.app/",
+    url: "https://glados-zone.vercel.app/",
     siteName: "Glados Zone",
     images: [],
     locale: "en_US",
